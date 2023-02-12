@@ -1,0 +1,22 @@
+﻿@model IEnumerable<webapp.Models.Pagina>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@foreach (var item in Model)
+{
+    <a href="/Ejemplo?numpag=@(item.Id-1)" class="button">Anterior</a>
+    <form method="get" action="/Ejemplo">
+        <input type="text" id="numpag" name="numpag">
+        <input type="submit">
+    </form>
+    <a href="/Ejemplo?numpag=@(item.Id + 1)" class="button">Siguiente</a>
+    <img src="@item.URL">
+}
