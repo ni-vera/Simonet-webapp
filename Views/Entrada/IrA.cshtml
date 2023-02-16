@@ -1,0 +1,18 @@
+﻿@model IEnumerable<webapp.Models.Pagina>
+    
+@{
+    ViewData["Title"] = "Index";
+}
+
+@foreach (var item in Model)
+{
+        <a asp-action="IrA" asp-route-numpag="@(item.Id - 1)">Anterior</a>
+        <form method="get" action="/Ejemplo">
+            <input type="text" id="numpag" name="numpag">
+            <input type="submit">
+        </form>
+        <a asp-action="IrA" asp-route-numpag="@(item.Id + 1)" class="button">Siguiente</a>
+        <img src="@item.URL">
+}
+
+

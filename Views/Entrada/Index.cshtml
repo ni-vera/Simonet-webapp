@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Entrada>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index Entradas</h1>
+
+<table class="table table-bordered table-striped style = width:100%">
+    <thead>
+        <tr>
+            <th>
+                Entrada
+            </th>
+            <th>
+                Página
+            </th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.entrada
+                <td>
+                    <a asp-action="IrA" asp-route-numpag="@item.pagina" target="_blank">Ver entrada</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

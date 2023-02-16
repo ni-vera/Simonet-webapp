@@ -26,3 +26,7 @@ a.button {
 form {
     display: inline-block;
 }
+img {
+    height: 1100px;
+    width:auto;
+}
