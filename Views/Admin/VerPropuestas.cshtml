@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Propuesta>
+@{
+    ViewData["Title"] = "Propuestas";
+}
+
+<h1>Propuestas</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Entrada</th>
+            <th>Pagina</th>
+            <th>Colaborador</th>
+            <th>Correo</th>
+            <th>Estado</th>
+            <th>Fecha</th>
+            <th>Aceptar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.entrada</td>
+                <td>@item.pagina</td>
+                <td>@item.Colaborador</td>
+                <td>@item.Correo</td>
+                <td>@item.Estado</td>
+                <td>@item.Fecha</td>
+                <td>
+                <a asp-action="CrearEntrada" asp-route-entrada="@item.entrada" asp-route-pagina="@item.pagina">Aceptar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

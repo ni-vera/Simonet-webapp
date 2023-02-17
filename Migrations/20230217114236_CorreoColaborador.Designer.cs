@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using webapp;
 
@@ -11,9 +12,11 @@ using webapp;
 namespace webapp.Migrations
 {
     [DbContext(typeof(WebappDbContext))]
-    partial class WebappDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230217114236_CorreoColaborador")]
+    partial class CorreoColaborador
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

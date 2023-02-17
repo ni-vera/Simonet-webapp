@@ -7,11 +7,12 @@
 @foreach (var item in Model)
 {
         <a asp-action="IrA" asp-route-numpag="@(item.Id - 1)">Anterior</a>
-        <form method="get" action="/Ejemplo">
+        <form method="get" action="IrA">
             <input type="text" id="numpag" name="numpag">
             <input type="submit">
         </form>
         <a asp-action="IrA" asp-route-numpag="@(item.Id + 1)" class="button">Siguiente</a>
+        <a asp-action="Index">Volver a la lista de entradas</a>
         <img src="@item.URL">
 }
 

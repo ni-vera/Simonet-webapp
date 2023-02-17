@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Entrada>
+   
+
+@{
+    ViewData["Title"] = "Borrar";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Entrada</th>
+            <th>Pagina</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.entrada</td>
+                <td>@item.pagina</td>
+                <td>
+                    <a asp-action="Borrar" asp-route-entrada="@item.entrada">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

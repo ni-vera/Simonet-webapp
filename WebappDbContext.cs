@@ -9,5 +9,6 @@ namespace webapp
         {
         }
         public DbSet<Entrada> Entradas { get; set; }
+        public DbSet<Propuesta> Propuestas { get; set; }
     }
 }

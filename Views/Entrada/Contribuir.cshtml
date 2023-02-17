@@ -1,0 +1,35 @@
+﻿@model Propuesta
+@{
+    ViewData["Title"] = "Contribuir";
+}
+
+<h1>Contribuir</h1>
+
+<form method="post" action="/Entrada/CrearPropuesta">
+    <div class="border p-3 nt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Realizar propuesta</h2>
+            <hr />
+        </div>
+    </div>
+    <div class="mb-3">
+        <label asp-for=entrada>Entrada</label>
+        <input asp-for="entrada" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for=pagina>Pagina</label>
+        <input asp-for="pagina" class="form-control" min=0 max=18 />
+    </div>
+    <div class="mb-3">
+        <label asp-for=Colaborador>Indique su nombre</label>
+        <input asp-for="Colaborador" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for=Correo>Correo electrónico</label>
+        <input asp-for="Correo" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary" style="width:115px">Enviar</button>
+    <a></a>
+    <button type="reset" class="btn btn-primary" style="width:115px">Reset</button>
+</form>
+<a asp-action="Index">Volver al diccionario</a>

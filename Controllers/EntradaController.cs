@@ -25,5 +25,17 @@ namespace webapp.Controllers
             };
             return View(OnePage);
         }
+
+        public IActionResult Contribuir()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CrearPropuesta(Propuesta obj)
+        {
+            _db.Propuestas.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
