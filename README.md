@@ -3,6 +3,8 @@
 
 **Proyecto de informatización del *Glosario de voces ibéricas y latinas usadas entre los mozárabes* de Francisco Javier Simonet (en desarrollo).**
 
+[Acceso al glosario](https://simonet2.azurewebsites.net/)
+
 Todos los aspectos presentes del proyecto están hospedados en Azure (aplicación .NET Core MVC en App Service, imágenes de la páginas en Blob Storage,
 base de datos en Azure SQL Database).
 <p align=justify>
