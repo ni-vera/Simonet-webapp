@@ -29,4 +29,4 @@ llenando un formulario.</p>
 
 -Función colaborativa avanzada (no limitada a propuestas de entrada, sino abarcando también la modificación de campos de entradas ya existentes).
 
--Aviso a administrador cada vez que se haga una propuesta de entrada o edición.
+-Aviso por correo a administrador cada vez que se haga una propuesta de entrada o edición.
