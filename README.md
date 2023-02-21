@@ -5,11 +5,11 @@
 
 Todos los aspectos presentes del proyecto están hospedados en Azure (aplicación .NET Core MVC en App Service, imágenes de la páginas en Blob Storage,
 base de datos en Azure SQL Database).
-
+<p align=justify>
 El método de extracción de las entradas, sus páginas correspondientes y (en el futuro) otra información perteneciente a cada entrada se encuentra en el
 archivo Create_database.py del [repositorio hermano](https://github.com/ni-vera/Simonet-database). Dado lo imperfecto del método de extracción, se ha 
 habilitado una función colaborativa mediante la cual los usuarios pueden proponer la adición de entradas no recogidas por el método de extracción re-
-llenando un formulario.
+llenando un formulario.</p>
 
 ## Características ya implementadas
 
