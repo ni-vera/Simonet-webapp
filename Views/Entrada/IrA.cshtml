@@ -9,10 +9,12 @@
         <a asp-action="IrA" asp-route-numpag="@(item.Id - 1)">Anterior</a>
         <form method="get" action="IrA">
             <input type="text" id="numpag" name="numpag">
-            <input type="submit">
+            <input type="submit" value="Ir">
         </form>
-        <a asp-action="IrA" asp-route-numpag="@(item.Id + 1)" class="button">Siguiente</a>
+        <a asp-action="IrA" asp-route-numpag="@(item.Id + 1)">Siguiente</a>
+        <p>
         <a asp-action="Index">Volver a la lista de entradas</a>
+        </p>
         <img src="@item.URL">
 }
 

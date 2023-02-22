@@ -5,7 +5,7 @@
 
 <h1>Contribuir</h1>
 
-<form method="post" action="/Entrada/CrearPropuesta">
+<form method="post" action="/Entrada/Contribuir">
     <div class="border p-3 nt-4">
         <div class="row pb-2">
             <h2 class="text-primary">Realizar propuesta</h2>
@@ -15,10 +15,12 @@
     <div class="mb-3">
         <label asp-for=entrada>Entrada</label>
         <input asp-for="entrada" class="form-control"/>
+        <span asp-validation-for="entrada" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for=pagina>Pagina</label>
         <input asp-for="pagina" class="form-control" min=0 max=18 />
+        <span asp-validation-for="pagina" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for=Colaborador>Indique su nombre</label>

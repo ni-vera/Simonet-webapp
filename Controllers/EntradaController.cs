@@ -31,11 +31,15 @@ namespace webapp.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult CrearPropuesta(Propuesta obj)
+        public IActionResult Contribuir(Propuesta obj)
         {
-            _db.Propuestas.Add(obj);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _db.Propuestas.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
         }
     }
 }
