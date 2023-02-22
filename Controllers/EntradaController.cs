@@ -11,10 +11,14 @@ namespace webapp.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string buscar)
         {
-            IEnumerable<Entrada> objEntrada = _db.Entradas;
-            return View(objEntrada);
+            var entradas = from entrada in _db.Entradas select entrada;
+            if (!String.IsNullOrEmpty(buscar))
+            {
+                entradas = entradas.Where(s=>s.entrada!.Contains(buscar));
+            }
+            return View(entradas.ToList());
         }
 
         public IActionResult IrA(int numpag = 1)
